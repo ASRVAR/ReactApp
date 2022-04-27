@@ -22,8 +22,15 @@ export class Navigation extends Component{
                            <NavLink className='d-inline p-2 text-white' to="/employee">
                                Employee
                                </NavLink>
-                   </Nav>               
+                   </Nav>       
+                  
                </Navbar.Collapse>   
+               <form className="d-flex">
+               <div className="form-check form-switch">
+                      <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onClick={props.toggelMode} />
+                      <label className="text-light" for="flexSwitchCheckChecked">Enable Drak Mode</label>
+               </div>
+               </form>        
            </Navbar>
            </div>
            </>

@@ -4,17 +4,25 @@ import {Department} from './Department';
 import {Employee} from './Employee';
 import {Navigation} from './Navigation';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
+import { useState } from 'react';
 //import {BrowserRouter,Route,Switch} from "react-router";
 
 function App() {
+  const [mode, setMode]=useState(false);
+  const toggelMode=()=>{
+      if(mode==='light')
+      {
+        setMode='dark'
+      }
+    setMode='dark'
+  }
   return (
     <>
     <BrowserRouter>
     <div className='container'>
      <h3 className='m-4 d-flex justify-content-center'>WEB API REACT APP</h3>
      </div>
-    <Navigation/>
-   
+    <Navigation mode={mode} enableDarkMode={toggelMode}/>
     <Routes>
           <Route path='/' element={<Home />} exact />
           <Route path='/department' element={<Department />} />
