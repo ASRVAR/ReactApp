@@ -7,8 +7,8 @@ export class Navigation extends Component{
     render(){
         return(
             <>
-            <div className='container'>
-           <Navbar bg='info' expand="lg" >
+            <div className='container-fluid'>
+           <Navbar bg='dark' expand="lg" >
            <Navbar.Toggle aria-controls='basic-navbar-nab'/>
            <Navbar.Collapse id='basic-navbar-nav'>
                <Nav>

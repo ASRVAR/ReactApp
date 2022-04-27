@@ -22,6 +22,10 @@ export default function TextForm(props) {
         let gmail=text+"@gmail.com";
         setText(gmail);
     }
+    const handelExtarSpaces=()=>{
+      let newText=text.split(/[ ]+/);
+      setText(newText.join(" "))
+    }
   /*  
         const addition=()=>{
         let a=3;
@@ -49,7 +53,8 @@ export default function TextForm(props) {
 <button className="btn btn-primary mx-2" onClick={handelLowClick}>Convert To Lowercase</button>
 {/* <button className="btn btn-success" onClick={addition}>Addition</button> */}
 <button className="btn btn-info mx-2" onClick={handelClearClick}>Clear Textarea</button>
-<button className="btn btn-info" onClick={handelGmailClick}>Convert To Gmail</button>
+<button className="btn btn-info mx-2" onClick={handelGmailClick}>Convert To Gmail</button>
+<button className="btn btn-info" onClick={handelExtarSpaces}>Remove Extra Spaces</button>
 </div>
 
 <div className="container mt-3">
